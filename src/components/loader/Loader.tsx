@@ -5,12 +5,18 @@ import { SpinLoader } from './SpinLoader';
 import { DotsLoader } from './DotsLoader';
 import { GradientLoader } from './GradientLoader';
 import { RippleLoader } from './RippleLoader';
+import { CircleProgressLoader } from './CircleProgressLoader';
+import { CircleFadeLoader } from './CircleFadeLoader';
+import { SunburstLoader } from './SunburstLoader';
+import { CircleDotsLoader } from './CircleDotsLoader';
+import { GridDotsLoader } from './GridDotsLoader';
 
 export type LoaderProps = {
   /**
    * The variant of the loader
    */
-  variant?: 'pulse' | 'spin' | 'dots' | 'gradient-bar' | 'gradient-circle' | 'ripple';
+  variant?: 'pulse' | 'spin' | 'dots' | 'gradient-bar' | 'gradient-circle' | 'ripple' | 
+            'circle-progress' | 'circle-fade' | 'sunburst' | 'circle-dots' | 'grid-dots';
   /**
    * The size of the loader
    */
@@ -54,6 +60,16 @@ export function Loader({
         return <GradientLoader size={size} variant="circle" className={className} />;
       case 'ripple':
         return <RippleLoader size={size} color={color} className={className} />;
+      case 'circle-progress':
+        return <CircleProgressLoader size={size} color={color} className={className} />;
+      case 'circle-fade':
+        return <CircleFadeLoader size={size} color={color} className={className} />;
+      case 'sunburst':
+        return <SunburstLoader size={size} color={color} className={className} />;
+      case 'circle-dots':
+        return <CircleDotsLoader size={size} color={color} className={className} />;
+      case 'grid-dots':
+        return <GridDotsLoader size={size} color={color} className={className} />;
       case 'spin':
       default:
         return <SpinLoader size={size} color={color} className={className} />;

@@ -16,12 +16,25 @@ type LoaderVariant = LoaderProps['variant'];
 type LoaderSize = LoaderProps['size'];
 type LoaderColor = LoaderProps['color'];
 
-const variants: LoaderVariant[] = ['spin', 'pulse', 'dots', 'gradient-bar', 'gradient-circle', 'ripple'];
+const variants: LoaderVariant[] = [
+  'spin', 
+  'pulse', 
+  'dots', 
+  'gradient-bar', 
+  'gradient-circle', 
+  'ripple', 
+  'circle-progress',
+  'circle-fade',
+  'sunburst',
+  'circle-dots',
+  'grid-dots'
+];
+
 const sizes: LoaderSize[] = ['sm', 'md', 'lg'];
 const colors: LoaderColor[] = ['primary', 'secondary', 'accent', 'success', 'warning', 'error'];
 
 export function LoaderShowcase() {
-  const [activeVariant, setActiveVariant] = React.useState<LoaderVariant>('spin');
+  const [activeVariant, setActiveVariant] = React.useState<LoaderVariant>('circle-progress');
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
