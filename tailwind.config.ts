@@ -125,6 +125,11 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'ripple': {
+					'0%': { transform: 'scale(0.1)', opacity: '1' },
+					'70%': { transform: 'scale(1)', opacity: '0.7' },
+					'100%': { transform: 'scale(1.2)', opacity: '0' }
 				}
 			},
 			animation: {

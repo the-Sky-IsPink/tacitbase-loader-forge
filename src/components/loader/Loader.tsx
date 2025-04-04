@@ -4,12 +4,13 @@ import { PulseLoader } from './PulseLoader';
 import { SpinLoader } from './SpinLoader';
 import { DotsLoader } from './DotsLoader';
 import { GradientLoader } from './GradientLoader';
+import { RippleLoader } from './RippleLoader';
 
 export type LoaderProps = {
   /**
    * The variant of the loader
    */
-  variant?: 'pulse' | 'spin' | 'dots' | 'gradient-bar' | 'gradient-circle';
+  variant?: 'pulse' | 'spin' | 'dots' | 'gradient-bar' | 'gradient-circle' | 'ripple';
   /**
    * The size of the loader
    */
@@ -51,6 +52,8 @@ export function Loader({
         return <GradientLoader size={size} variant="bar" className={className} />;
       case 'gradient-circle':
         return <GradientLoader size={size} variant="circle" className={className} />;
+      case 'ripple':
+        return <RippleLoader size={size} color={color} className={className} />;
       case 'spin':
       default:
         return <SpinLoader size={size} color={color} className={className} />;

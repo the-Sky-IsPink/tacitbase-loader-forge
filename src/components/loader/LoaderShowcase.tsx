@@ -16,7 +16,7 @@ type LoaderVariant = LoaderProps['variant'];
 type LoaderSize = LoaderProps['size'];
 type LoaderColor = LoaderProps['color'];
 
-const variants: LoaderVariant[] = ['spin', 'pulse', 'dots', 'gradient-bar', 'gradient-circle'];
+const variants: LoaderVariant[] = ['spin', 'pulse', 'dots', 'gradient-bar', 'gradient-circle', 'ripple'];
 const sizes: LoaderSize[] = ['sm', 'md', 'lg'];
 const colors: LoaderColor[] = ['primary', 'secondary', 'accent', 'success', 'warning', 'error'];
 
